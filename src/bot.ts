@@ -1,5 +1,5 @@
 import { Client, Intents, Interaction } from "discord.js";
-import { token, clientId } from "../config.json";
+import { token, clientId } from "../app.json";
 import { registerCommands, commands } from "./commands";
 import server from "./backend";
 
