@@ -1,0 +1,59 @@
+.acm-container {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+}
+
+.acm-top {
+  position: absolute;
+  width: 98%;
+  height: 8%;
+  padding: 1%;
+  top: 0;
+  left: 0;
+}
+
+.acm-left {
+  position: absolute;
+  width: 28%;
+  height: 87%;
+  padding: 1%;
+  left: 0;
+  top: 10%;
+}
+
+.acm-body {
+  position: absolute;
+  width: 69.8%;
+  height: 90%;
+  padding: 0;
+  left: 30%;
+  top: 10%;
+  overflow-y: auto;
+}
+
+@media (orientation: portrait) {
+  .acm-body {
+    position: absolute;
+    width: 100%;
+    height: 90%;
+    padding: 0;
+    left: 0;
+    top: 10%;
+  }
+  .acm-left {
+    position: absolute;
+    width: 98%;
+    height: 88%;
+    padding: 1%;
+    left: -100%;
+    top: 10%;
+    transition: left 1s;
+  }
+  .acm-container.nav-open .acm-left {
+    left: 0;
+  }
+}

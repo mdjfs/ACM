@@ -1,5 +1,20 @@
 import ReactDOM from "react-dom";
 import "./index.scss";
-import Track from "./pages/track";
+import ACMRouter from "./pages/router";
 
-ReactDOM.render(<Track></Track>, document.getElementById("root"));
+function render() {
+  ReactDOM.render(<ACMRouter />, document.getElementById("root"));
+}
+
+const session = sessionStorage.getItem("session");
+if (!session) {
+  fetch("/discord-auth").then(async (response) => {
+    if (response.status === 200) {
+      const json = await response.json();
+      sessionStorage.setItem("session", JSON.stringify(json));
+    }
+    render();
+  });
+} else {
+  render();
+}

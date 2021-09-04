@@ -1,0 +1,59 @@
+.track {
+  width: 50vh;
+  border-radius: 5px;
+  box-shadow: 1px 1px 3px 0px #00000024;
+  overflow: hidden;
+}
+
+.track img {
+  width: 100%;
+  color: transparent;
+  background-color: #00000024;
+}
+
+.track .data {
+  padding: 2%;
+}
+
+.track .data h1 {
+  font-size: 20px;
+}
+
+.track .data p {
+  font-size: 14px;
+  text-align: justify;
+}
+
+.track .data .footer {
+  text-align: left;
+  font-size: 10px;
+}
+
+.track .subtrack-selector {
+  height: 30px;
+}
+
+.track .data-track {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: none;
+  margin-left: 1%;
+  margin-right: 1%;
+  background-color: #00000024;
+  transition: all 1s;
+}
+
+.track .data-track:hover {
+  background-color: #7289da;
+  cursor: pointer;
+}
+
+.track .data-track.selected {
+  background-color: #7289da;
+}
+
+.track .data-track.selected:hover {
+  cursor: inherit;
+  background-color: #00000024;
+}

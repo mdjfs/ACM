@@ -2,6 +2,7 @@ import { Client, Intents, Interaction } from "discord.js";
 import { token, clientId } from "../app.json";
 import { registerCommands, commands } from "./commands";
 import server from "./backend";
+import database from "./database";
 
 const bot = new Client({
   intents: [
@@ -34,3 +35,6 @@ bot.login(token);
 
 server.listen("3000");
 console.log("Server listening in port 3000");
+
+database.sync({ force: true });
+console.log("Database initialized");
